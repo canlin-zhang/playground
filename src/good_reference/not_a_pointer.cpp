@@ -1,12 +1,12 @@
-#include <iostream>
 #include <cassert>
+#include <iostream>
 #include <memory>
 #include <type_traits>
 
 int main()
 {
     int x = 42;
-    int &r = x; // r is a reference to x
+    int& r = x; // r is a reference to x
 
     // Print values to show they refer to the same object
     std::cout << "Value of x: " << x << std::endl;

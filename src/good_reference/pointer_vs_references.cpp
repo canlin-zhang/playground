@@ -6,16 +6,17 @@
 
 void pointer_demo()
 {
-    std::cout << "Demonstrating pointers in C++" << std::endl
-              << std::endl;
+    std::cout << "Demonstrating pointers in C++" << std::endl << std::endl;
 
     int x = 42;
-    int *p = &x; // p is a pointer to x
+    int* p = &x; // p is a pointer to x
 
     // Print their memory addresses to show they aren't the same object
     std::cout << "Address of x: " << &x << std::endl;
     std::cout << "Address of p: " << &p << std::endl;
-    assert(reinterpret_cast<void *>(std::addressof(p)) != reinterpret_cast<void *>(std::addressof(x))); // p is not the same as x, it's a pointer to x
+    assert(
+        reinterpret_cast<void*>(std::addressof(p)) !=
+        reinterpret_cast<void*>(std::addressof(x))); // p is not the same as x, it's a pointer to x
 
     // However, show that p points to the address of x
     std::cout << "Value of p (address of x): " << p << std::endl;
@@ -45,17 +46,15 @@ void pointer_demo()
     std::cout << "Value of *p after increment (value at arr[1]): " << *p << std::endl;
     assert(p == &arr[1]); // p now points to the second element of arr
 
-    std::cout << "Demonstration of pointers complete." << std::endl
-              << std::endl;
+    std::cout << "Demonstration of pointers complete." << std::endl << std::endl;
 }
 
 void reference_demo()
 {
-    std::cout << "Demonstrating references in C++" << std::endl
-              << std::endl;
+    std::cout << "Demonstrating references in C++" << std::endl << std::endl;
 
     int x = 42;
-    int &r = x; // r is a reference to x
+    int& r = x; // r is a reference to x
 
     // Print addresses to show they refer to the same object
     std::cout << "Address of x: " << &x << std::endl;
@@ -77,8 +76,8 @@ void reference_demo()
     // r = nullptr; // This is not valid, as r is a reference and cannot
     // be null
     // However, this is undefined behavior
-    int *p = nullptr;
-    int &p_ref = *p; // This is undefined behavior, dereferencing a null pointer
+    int* p = nullptr;
+    int& p_ref = *p; // This is undefined behavior, dereferencing a null pointer
     // std::cout << "Value of p_ref (undefined behavior): " << p_ref << std::endl;
 
     // Increment (arithmetic) does not change the object r refers to
@@ -90,8 +89,7 @@ void reference_demo()
     std::cout << "Address of x after increment: " << &x << std::endl;
     std::cout << "Address of r after increment: " << &r << std::endl;
 
-    std::cout << "Demonstration of references complete." << std::endl
-              << std::endl;
+    std::cout << "Demonstration of references complete." << std::endl << std::endl;
 }
 
 int main()

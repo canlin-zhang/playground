@@ -2,10 +2,10 @@
 
 struct Foo
 {
-    int *&bar;
+    int*& bar;
 };
 
-int *p = nullptr;
+int* p = nullptr;
 Foo foo{p};
 
 int main()
