@@ -35,6 +35,7 @@ Release/
 *.pdb
 *.ipch
 *.log
+.vscode/
 
 # CMake-specific files
 CMakeCache.txt
